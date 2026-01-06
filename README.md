@@ -19,7 +19,7 @@ Il présente une sélection de **voitures sportives et luxueuses** avec un desig
 
 ---
 
-## 📄 Pages du site
+##  Pages du site
 - `index.html` → Page d’accueil
 - `maybach.html` → Page Maybach
 - `rollsroyce.html` → Page Rolls-Royce
