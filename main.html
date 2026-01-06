@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Luxury & Sport Cars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* BODY */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0b0b;
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #000;
+            padding: 25px 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #d4af37; /* gold */
+            letter-spacing: 4px;
+            font-weight: 400;
+        }
+
+        nav a {
+            margin-left: 35px;
+            text-decoration: none;
+            color: #c0c0c0; /* silver */
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            /* Image de fond */
+            background-image: url('c:\Users\user\OneDrive\Obrazy\80fadbe8a67ec51ef707aa15444c5dd8.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* overlay sombre */
+            z-index: 1;
+        }
+
+        .hero h2,
+        .hero p,
+        .hero button {
+            position: relative;
+            z-index: 2; /* texte au-dessus de l'overlay */
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #ffffff;
+        }
+
+        .hero p {
+            margin: 25px 0 45px;
+            color: #c0c0c0;
+        }
+
+        .hero button {
+            padding: 14px 45px;
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .hero button:hover {
+            background-color: #d4af37;
+            color: #000;
+        }
+
+        /* VOITURES */
+        .voitures {
+            padding: 90px 70px;
+            text-align: center;
+        }
+
+        .voitures h2 {
+            margin-bottom: 70px;
+            letter-spacing: 4px;
+            font-weight: 300;
+            color: #ffffff;
+        }
+
+        .car-list {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            flex-wrap: wrap;
+        }
+
+        .car-card {
+            width: 310px;
+            background-color: #111;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .car-card h3 {
+            margin-top: 25px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .car-card p {
+            margin: 18px 0 30px;
+            color: #d4af37; /* gold */
+            letter-spacing: 1px;
+        }
+
+        /* A PROPOS */
+        .apropos {
+            padding: 80px 90px;
+            background-color: #0f0f0f;
+            text-align: center;
+        }
+
+        .apropos h2 {
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+            font-weight: 300;
+            color: #ffffff;
+        }
+
+        .apropos p {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #000;
+            padding: 35px;
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .car-list {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .hero h2 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .car-card {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+ <h1>LUXURY CARS</h1>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="maybach.html">Voitures</a>
+            <a href="#apropos">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Sport & Luxury Experience</h2>
+        <p>Puissance, élégance et performance réunies</p>
+        <button onclick="voirVoitures()">Découvrir</button>
+    </section>
+
+    <!-- VOITURES -->
+    <section id="voitures" class="voitures">
+        <h2>LUXURY AND COMFORT</h2>
+
+        <div class="car-list">
+
+            <div class="car-card">
+                
+<a href="maybach.html" > <img src="c:\Users\user\OneDrive\Obrazy\335accfd6b3fc9407d0a5aa06403bd12.jpg" alt="Maybach"></a>
+                <h3>Maybach S-Class</h3>
+                <p>3 800 000 DH</p>
+            </div>
+
+            <div class="car-card">
+<a href="rolls.html">                 <img src="c:\Users\user\OneDrive\Obrazy\a4a10d07633ddb47edd8616c54e0a3e6.jpg" alt="Rolls-Royce"></a>
+              <h3>Rolls-Royce Phantom</h3> 
+                <p>6 500 000 DH</p>
+            </div>
+
+            <div class="car-card">
+<a href="911.html">                <img src="c:\Users\user\OneDrive\Obrazy\a46fffc2d742a1aa4bbdf13e595b80b1.jpg" alt="Porsche 911"></a>
+                 <h3>Porsche 911</h3>
+                <p>2 400 000 DH</p>
+            </div>
+
+<a href="maclaren.html">            <div class="car-card">
+                <img src="c:\Users\user\OneDrive\Obrazy\beb389e064494831ebac13eab33abc46.jpg" alt="McLaren"></a>
+                <h3>McLaren 720S</h3>
+                <p>4 200 000 DH</p>
+            </div>
+
+            <div class="car-card">
+<a href="MERCEDES.html">    <img src="c:\Users\user\OneDrive\Obrazy\002fcd60ff60d1136d39482626864bdb.jpg" alt="Mercedes SLS"></a>
+                <h3>Mercedes SLS AMG</h3> 
+                <p>3 700 000 DH</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- A PROPOS -->
+    <section id="apropos" class="apropos">
+        <h2>À PROPOS</h2>
+        <p>
+        Bienvenue sur <strong>Luxury Cars</strong>, votre référence pour les voitures sportives et luxueuses.
+        Nous sélectionnons les modèles les plus prestigieux pour offrir une expérience unique alliant performance,
+        design et confort. Découvrez les marques les plus emblématiques telles que <em>Maybach, Rolls-Royce, Porsche, McLaren et Mercedes SLS</em>.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <p>Contact : luxurycars@email.com</p>
+        <p>© 2025 Luxury Cars</p>
+    </footer>
+
+    <script>
+        function voirVoitures() {
+            document.getElementById("voitures").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>
+

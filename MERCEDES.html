@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercedes SLS AMG - Luxury Cars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {font-family:'Poppins',sans-serif;background:#0b0b0b;color:#c0c0c0;margin:0;}
+        header {background:#000;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;}
+        header h1 {color:#d4af37;letter-spacing:4px;}
+        nav a {margin-left:25px;text-decoration:none;color:#c0c0c0;transition:0.3s;}
+        nav a:hover{color:#d4af37;}
+        .hero-car {position:relative;height:60vh;background-image:url('assets/images/mercedes_sls.jpg');background-size:cover;background-position:center;}
+        .hero-car::before {content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+        .hero-car h2 {position:relative;color:#fff;font-size:48px;text-align:center;top:50%;transform:translateY(-50%);}
+        .car-details {padding:50px 80px;}
+        .car-details h3 {color:#d4af37;font-size:32px;margin-bottom:15px;}
+        .car-details p {margin-bottom:20px;line-height:1.6;}
+        .car-details .price {font-size:24px;color:#fff;margin-bottom:25px;}
+        .car-details button {padding: 14px 40px;border: 1px solid #d4af37;background: transparent;color: #d4af37;font-size: 16px;cursor: pointer;transition: 0.4s;margin-top: 30px;}        .car-details button:hover {background:#d4af37;color:#000;}
+        .car-gallery {display:flex;gap:15px;margin-top:20px;flex-wrap:wrap;justify-content:center;}
+        .car-gallery img {width: 320px;height: 220px;object-fit: cover;border-radius: 12px;}        .car-gallery img:hover {transform:scale(0.90);}
+        footer {padding:30px;text-align:center;background:#000;color:#888;}
+        @media(max-width:768px){.car-details{padding:30px 20px;}.hero-car h2{font-size:32px;}.car-gallery img{width:45%;}}
+        @media(max-width:480px){.car-gallery img{width:100%;}}
+    </style>
+</head>
+<body>
+<header>
+    <h1>LUXURY CARS</h1>
+    <nav>
+        <a href="main.html">Accueil</a>
+        <a href="maybach.html">Maybach</a>
+        <a href="rolls.html">Rolls-Royce</a>
+        <a href="911.html">Porsche 911</a>
+        <a href="maclaren.html">McLaren</a>
+        <a href="MERCEDES.html">Mercedes SLS</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero-car"><h2>Mercedes SLS AMG</h2></section>
+
+<section class="car-details">
+    <h3>Mercedes SLS AMG</h3>
+    <p class="price">3 700 000 DH</p>
+    <p>La Mercedes SLS AMG est une voiture de sport de luxe emblématique, avec son moteur V8 et ses portes papillon iconiques.
+        Son design impressionne autant que sa performance sur route.</p>
+    <p>Alliant confort, technologie et sensations fortes, cette voiture est parfaite pour les amateurs de voitures haut de gamme.</p>
+
+    <!-- Galerie simple -->
+    <div class="car-gallery">
+        <img src="c:\Users\user\OneDrive\Obrazy\mercedes\15c245bdc34a9bc03e7fa86b0200a5c6.jpg" alt="Mercedes SLS intérieur">
+        <img src="c:\Users\user\OneDrive\Obrazy\mercedes\3ed98da8f4059e6d090fc0a4a8e5775b.jpg" alt="Mercedes SLS extérieur">
+        <img src="c:\Users\user\OneDrive\Obrazy\mercedes\9c4c3ff7896e524eaa7ac2d8371a77ba.jpg" alt="Mercedes SLS côté">
+    </div>
+
+    <a href="contact.html"><button>Contactez-nous</button></a>
+</section>
+
+<footer>
+    <p>Contact : luxurycars@email.com</p>
+    <p>© 2025 Luxury Cars</p>
+</footer>
+</body>
+</html>
