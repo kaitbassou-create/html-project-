@@ -20,12 +20,12 @@ Il présente une sélection de **voitures sportives et luxueuses** avec un desig
 ---
 
 ##  Pages du site
-- `index.html` → Page d’accueil
+- `main.html` → Page d’accueil
 - `maybach.html` → Page Maybach
-- `rollsroyce.html` → Page Rolls-Royce
-- `porsche911.html` → Page Porsche 911
-- `mclaren.html` → Page McLaren
-- `mercedes_sls.html` → Page Mercedes SLS AMG
+- `rolls.html` → Page Rolls-Royce
+- `911.html` → Page Porsche 911
+- `maclaren.html` → Page McLaren
+- `MERCEDES.html` → Page Mercedes SLS AMG
 - `contact.html` → Page de contact
 
 ---
